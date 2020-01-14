@@ -1,6 +1,9 @@
-require "top_posts/version"
+require 'pry'
+require 'rest-client'
+require 'json'
 
-module TopPosts
-  class Error < StandardError; end
-  # Your code goes here...
-end
+require_relative "./top_posts/version"
+require_relative "./top_posts/api_service"
+require_relative './top_posts/cli'
+#require_relative './top_posts/user'
+require_relative './top_posts/article'

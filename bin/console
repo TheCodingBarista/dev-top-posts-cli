@@ -9,6 +9,7 @@ require "top_posts"
 # (If you use this, don't forget to add pry to your Gemfile!)
 # require "pry"
 # Pry.start
-
+TopPosts::ApiService.get_articles
+#TopPosts::CLI.new.call
 require "irb"
 IRB.start(__FILE__)
