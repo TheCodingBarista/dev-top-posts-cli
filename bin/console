@@ -9,7 +9,13 @@ require "top_posts"
 # (If you use this, don't forget to add pry to your Gemfile!)
 # require "pry"
 # Pry.start
-TopPosts::ApiService.get_users
+
 #TopPosts::CLI.new.call
+TopPosts::API.create_articles
+TopPosts::Article.all
+#TopPosts::API.create_authors
+#TopPosts::Author.all
+
+
 require "irb"
 IRB.start(__FILE__)
