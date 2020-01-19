@@ -4,7 +4,7 @@
 
      def initialize(author)
          author.each do |key, value|
-          if value == nil
+          if value == nil || value == ""
               value = "Information not found."
           end
             self.send("#{key}=", value)

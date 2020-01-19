@@ -12,7 +12,7 @@ class TopPosts::API
             :description => hash["description"],
             :url => hash["url"],
             :tags => hash["tag_list"],
-            :author => hash["user"]
+            #:author => hash["user"]["name"]
           }
         TopPosts::Article.new(article)
         end 

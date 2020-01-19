@@ -10,11 +10,8 @@ require "top_posts"
 # require "pry"
 # Pry.start
 
-#TopPosts::CLI.new.call
-TopPosts::API.create_articles
-TopPosts::Article.all
-#TopPosts::API.create_authors
-#TopPosts::Author.all
+TopPosts::CLI.new.call
+#TopPosts::Author.articles
 
 
 require "irb"

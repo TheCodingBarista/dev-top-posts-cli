@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-#require  './lib/top_posts'
+require_relative  '../lib/top_posts'
 
 
-#TopPosts::CLI.new.call
+TopPosts::CLI.new.call

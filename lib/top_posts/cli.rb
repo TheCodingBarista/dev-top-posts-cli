@@ -3,9 +3,9 @@ class TopPosts::CLI
         TopPosts::API.create_articles
         TopPosts::API.create_authors
         puts "Welcome! Let's check out some DEV.to articles!"
+        puts ""
         top_five
         menu
-        goodbye
     end
 
      def top_five
@@ -13,33 +13,43 @@ class TopPosts::CLI
          puts ""
          TopPosts::Article.top_five
          puts ""
-         puts "To get more info on a Top Five article, type article number."
-         puts ""
-         
      end
 
     def menu
-        puts "To see a longer list of articles, type list."
+        puts "To see full list of articles, type 'list'"
         puts ""
-        puts "To exit, type exit"
-        input = gets.strip.downcase
-
+        puts "To get more information on an article, type 'more info'"
+        puts ""
+        puts "To exit, type 'exit'"
+        input = gets.strip.downcase        
+        case input
+        when 'list'
+            list_articles
+        when 'more info'
+            article_selection
+        when 'exit'
+            goodbye
+        else
+            puts "Sorry, please try again."
+            menu
+        end
     end
 
     def list_articles
-        #puts "This will be a list"
         TopPosts::Article.list_all
+        puts ""
+        menu
     end
     
-    def article_selection(article)
-        puts ""
-        puts "Which article would you like to see? Enter a number between 1 and 5:"
-        input = gets.strip.to_i
+    def article_selection
+        puts "Which article would you like more info on? Please enter the article number"
+        input = gets.strip.to_i - 1
+        TopPosts::Article.article_info(input)
     end
 
     def print_article_info
         puts ""
-        
+
     end
 
     def goodbye
