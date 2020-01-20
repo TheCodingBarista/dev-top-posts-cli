@@ -11,8 +11,6 @@ require "top_posts"
 # Pry.start
 
 TopPosts::CLI.new.call
-#TopPosts::Author.articles
-
 
 require "irb"
 IRB.start(__FILE__)

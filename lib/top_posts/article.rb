@@ -4,6 +4,9 @@ class TopPosts::Article
 
   def initialize(article)
     article.each do |key, value|
+      if value == nil || value == ""
+        value = "Information not found."
+      end
       self.send("#{key}=", value)
     end
     @@all << self
@@ -11,25 +14,33 @@ class TopPosts::Article
 
   def self.all
     @@all
-    binding.pry
   end
 
   def self.list_all
+    puts ""
+    self.top_five
+    puts "More Posts".green
+    puts ""
     self.all.each.with_index(1) do |article, index|
-       puts "#{index}. #{article.title}"
+      if index > 5
+        puts "#{index}. #{article.title}"
+      end
     end
   end 
 
   def self.top_five
+    puts "Top 5 Most Popular Posts".red
+    puts ""
     self.all.each.with_index(1) do |article, index|
        if index < 6
-       puts "#{index}. #{article.title}"
+       puts "#{index}. #{article.title}".blue
        puts ""
        end
     end
   end
 
-  def self.find_article_number(number)
-    self.all[number-1]
+  def self.article_info(input)
+    article = self.all[input]
+    TopPosts::CLI.print_article(article)
   end
 end
