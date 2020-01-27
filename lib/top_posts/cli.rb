@@ -54,7 +54,7 @@ class TopPosts::CLI
         puts "Which article would you like more info on? Please enter the article number."
         puts ""
         input = gets.strip.to_i - 1
-        if input >= 1  && input <= 30
+        if input >= 1  && input <= 29
             TopPosts::Article.article_info(input)
         else
             input_error
@@ -85,5 +85,6 @@ class TopPosts::CLI
     def goodbye
         puts ""
         puts "Thank you! Come back next week for more content!"
+        exit!
     end
 end
