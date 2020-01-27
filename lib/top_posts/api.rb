@@ -12,20 +12,15 @@ class TopPosts::API
             :description => hash["description"],
             :url => hash["url"],
             :tags => hash["tag_list"],
-            :author => hash["user"]["name"]
           }
-        TopPosts::Article.new(article)
+
+          author = {
+            :name => hash["user"]["name"],
+            :username => hash["user"]["username"],
+            :github => hash["user"]["github_username"],
+            :website => hash["user"]["website_url"]
+          }
+        TopPosts::Article.new(article, author)
         end 
     end
-
-    def self.create_authors
-      self.get_page.each do |hash|
-        author = {
-          :name => hash["user"]["name"],
-          :username => hash["user"]["username"],
-          :website => hash["user"]["website_url"]
-        }
-      TopPosts::Author.new(author)
-      end 
-    end
-end
+ end

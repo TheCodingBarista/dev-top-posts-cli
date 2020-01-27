@@ -1,16 +1,12 @@
-# TopPosts
+# DEV Top Posts
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/top_posts`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to the home for the top posts on DEV.to! 
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-```ruby
 gem 'top_posts'
-```
 
 And then execute:
 
@@ -22,7 +18,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+With Dev Top Posts, you can:
+
+    1. Find out what the current Top Five posts are
+    2. Get a more detailed list of the top 30
+    3. Get more in depth information about any article on the list
 
 ## Development
 
@@ -32,7 +32,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/top_posts. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/top_posts/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/TheCodingBarista/dev-top-posts-cli#topposts. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/TheCodingBarista/dev-top-posts-cli/blob/master/CODE_OF_CONDUCT.md).
 
 
 ## License
@@ -41,4 +41,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the TopPosts project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/top_posts/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the TopPosts project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/TheCodingBarista/dev-top-posts-cli/blob/master/CODE_OF_CONDUCT.md).

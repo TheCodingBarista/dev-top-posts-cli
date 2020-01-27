@@ -10,7 +10,5 @@ require "top_posts"
 # require "pry"
 # Pry.start
 
-TopPosts::CLI.new.call
-
 require "irb"
 IRB.start(__FILE__)

@@ -2,5 +2,4 @@
 
 require_relative  '../lib/top_posts'
 
-
 TopPosts::CLI.new.call

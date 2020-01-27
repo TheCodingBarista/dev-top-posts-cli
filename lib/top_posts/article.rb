@@ -2,13 +2,18 @@ class TopPosts::Article
   attr_accessor :title, :description, :url, :tags, :author
   @@all = []
 
-  def initialize(article)
+  def initialize(article, author)
     article.each do |key, value|
       if value == nil || value == ""
         value = "Information not found."
       end
       self.send("#{key}=", value)
     end
+
+    author.each do
+      self.author = author
+    end
+    
     @@all << self
   end
 
@@ -43,4 +48,5 @@ class TopPosts::Article
     article = self.all[input]
     TopPosts::CLI.print_article(article)
   end
+
 end
